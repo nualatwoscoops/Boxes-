@@ -16,6 +16,14 @@ function resetBoxes() {
   green.classList.remove("offset");
 }
 
+function showRedRightOfBlue() {
+  'use strict';
+  resetBoxes();
+  let redRight = document.getElementById("red")
+  blueBottom.style.display = "block";
+  redRight.classList.add("redRight");
+}
+
 function showBlueRightOfRed() {
   'use strict';
   resetBoxes();
@@ -43,7 +51,7 @@ function init() {
   document.getElementById("btn1").addEventListener("click", showBlueInside);
   document.getElementById("btn2").addEventListener("click", showBlueBottom);
   document.getElementById("btn3").addEventListener("click", showBlueRightOfRed);
- // document.getElementById("btn4").addEventListener("click", showRedRightOfBlue);
+  document.getElementById("btn4").addEventListener("click", showRedRightOfBlue);
   //document.getElementById("btn5").addEventListener("click", showBlueOffsetInRed);
   //document.getElementById("btn6").addEventListener("click", showGreen);
 }
