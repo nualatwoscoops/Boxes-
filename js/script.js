@@ -16,6 +16,13 @@ function resetBoxes() {
   green.classList.remove("offset");
 }
 
+function showBlueBottom() {
+  'use strict';
+  resetBoxes();
+  let blueBottom = document.getElementById("blueBottom");
+  blueBottom.style.display = "block";
+}
+
 function showBlueInside() {
   'use strict';
   resetBoxes();
@@ -26,7 +33,7 @@ function showBlueInside() {
 function init() {
   'use strict';
   document.getElementById("btn1").addEventListener("click", showBlueInside);
-  //document.getElementById("btn2").addEventListener("click", showBlueBottom);
+  document.getElementById("btn2").addEventListener("click", showBlueBottom);
  // document.getElementById("btn3").addEventListener("click", showBlueRightOfRed);
  // document.getElementById("btn4").addEventListener("click", showRedRightOfBlue);
   //document.getElementById("btn5").addEventListener("click", showBlueOffsetInRed);
