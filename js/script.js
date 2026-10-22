@@ -9,17 +9,19 @@ function resetBoxes() {
   blueIn.classList.remove("offset");
 
   blueBottom.style.display = "none";
-  blueIn.classList.remove("offset");
+  blueBottom.classList.remove("blueRight");
+  blueBottom.classList.remove("blueLeft");
 
-  red.classList.remove("offset");
+  red.classList.remove("redRight");
 
-  green.classList.remove("offset");
+  green.classList.remove("greenOn");
 }
 
 function showGreen() {
   'use strict';
   resetBoxes();
   let blueIn = document.getElementById("blueIn");
+  let green = document.getElementById("green");
   blueIn.style.display = "block";
   green.classList.add("greenOn");
   
@@ -38,16 +40,18 @@ function showRedRightOfBlue() {
   'use strict';
   resetBoxes();
   let redRight = document.getElementById("red");
+  let blueBottom = document.getElementById("blueBottom");
   blueBottom.style.display = "block";
+  blueBottom.classList.add("blueLeft");
   redRight.classList.add("redRight");
 }
 
 function showBlueRightOfRed() {
   'use strict';
   resetBoxes();
-  let showBlueRightOfRed = document.getElementById("blueBottom");
+  let blueBottom= document.getElementById("blueBottom");
   blueBottom.style.display = "block";
-  blueBottom.classList.add("blueRight")
+  blueBottom.classList.add("blueRight");
 }
 
 function showBlueBottom() {
